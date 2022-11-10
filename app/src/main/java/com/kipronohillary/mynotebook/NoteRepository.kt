@@ -17,4 +17,11 @@ class NoteRepository(private  val notesDao: NotesDao) {
     fun update(note: Note){
         notesDao.update(note)
     }
+
+    // on below line we are creating a delete method
+    // for deleting our note from database.
+    suspend fun delete(note: Note){
+        notesDao.delete(note)
+    }
+
 }
